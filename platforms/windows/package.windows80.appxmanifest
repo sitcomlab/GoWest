@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+    <Identity Name="709979c0-e833-11e4-a197-b7daf9f14408" Publisher="CN=$username$" Version="1.0.0.0" />
+    <Properties>
+        <DisplayName>HelloWorld</DisplayName>
+        <PublisherDisplayName>$username$</PublisherDisplayName>
+        <Logo>images\storelogo.png</Logo>
+    </Properties>
+    <Prerequisites>
+        <OSMinVersion>6.2.1</OSMinVersion>
+        <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+    </Prerequisites>
+    <Resources>
+        <Resource Language="x-generate" />
+    </Resources>
+    <Applications>
+        <Application Id="com.example.hello" StartPage="www/index.html">
+            <VisualElements BackgroundColor="#464646" Description="CordovaApp" DisplayName="HelloWorld" ForegroundText="light" Logo="images\Square150x150Logo.png" SmallLogo="images\Square30x30Logo.png">
+                <DefaultTile ShowName="allLogos" WideLogo="images\Wide310x150Logo.png" />
+                <SplashScreen Image="images\splashscreen.png" />
+            </VisualElements>
+        </Application>
+    </Applications>
+    <Capabilities>
+        <Capability Name="internetClient" />
+        <DeviceCapability Name="location" />
+        <DeviceCapability Name="webcam" />
+    </Capabilities>
+</Package>

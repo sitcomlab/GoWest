@@ -1,0 +1,59 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"firefoxos-package\" value=\"Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<permission description=\"Required for accessing user location.\" name=\"geolocation\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<feature name=\"Compass\"><param name=\"firefoxos-package\" value=\"Compass\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "www/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Vibration\"><param name=\"firefoxos-package\" value=\"Vibration\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "org.apache.cordova.geolocation": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "com.phonegap.plugins.barcodescanner": {
+            "PACKAGE_NAME": "com.example.hello"
+        }
+    },
+    "dependent_plugins": {}
+}

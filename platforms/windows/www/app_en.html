@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+              
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/leaflet.css" /> 
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/L.Control.Locate.min.css" />
+		<link rel="stylesheet" href="css/leaflet.contextmenu.css" />	
+		<link rel="stylesheet" href="css/Control.Geocoder.css" />		
+			
+	   <title>GoWest</title>	
+	   <script>
+		   	var targets, map, menuOpen = false, menuDiv="", circle = "", counter = 1, languageSelection = "english";
+	   </script>		
+    </head>
+    <body>
+    	<!--<img src="css/cover.png" id="overlay"/>-->	
+        <div class="app">
+        <div data-role="page" id="index">	
+            <div data-theme="b" data-role="header" id = "header">
+                <h1 id = "header1">GoWest</h1>
+            </div>
+			<div data-role="content" style="background-color: white">
+				  	<div id = "tab1"  class="tab-content">	
+				  		<div id = "map"></div>	
+				        <div id = "layerSwitcher" data-role="collapsible" data-collapsed="true"><h4>Menu</h4></div>
+						<div data-role="panel" id="myPanel" data-display="overlay" data-position="right">
+						  <a href="#closePanel" id = "closePanelButton" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Close panel</a>
+						</div>
+				    </div>
+				  	<div id = "targets"  class="tab-content">
+				  		<ul data-role="listview" data-inset="true" id = "selectedLocations">
+				  			<li data-role="list-divider">Selected locations (Name, Address)</li>
+				  		</ul>
+				    </div> 
+				  	<div id = "tab3"  class="tab-content">	
+						<div id="introduction"></div>
+						<div id ="tourButtons"></div>
+						<div id="results"></div>
+				    </div> 			
+				  	<div id = "tab4"  class="tab-content" >
+
+				    </div> 				        			        
+					<div data-role="navbar" id = "navTabs">
+					  <ul>
+					    <li><a href="#" class="ui-btn-active" data-href="tab1" id ="navtab1">Map</a></li>
+					    <li><a href="#" data-href="targets">Tour</a></li>
+					    <li><a href="#" data-href="tab3" id ="navtab2">Directions</a></li>
+					    <!--<li><a href="#" data-href="tab4" id ="navtab4">Signs</a></li>-->
+					  </ul>
+					</div>
+					<div id="menu">
+						<button href="" id = "configure">Exit</button>
+					</div>
+				</div>		    
+			</div>		
+		</div>	
+        </div>
+        
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>	
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+		<script src="js/library/googleLeaflet.js"></script>
+	    <script src='js/library/heatmap.js'></script>
+	    <script src='js/library/leaflet-heatmap.js'></script>
+	    <script src='js/library/leaflet.contextmenu.js'></script>
+	    <script src="js/scanner.js" ></script>
+	    <script src="js/language.js" ></script>
+		<script src='js/Targets.js'></script>
+		<script src='js/library/latlon.js'></script>
+		<script src='js/library/compass.js'></script>
+		<script src="js/library/Control.Geocoder.js"></script>
+		<script src='js/general.js'></script>
+		<script src='js/configuration.js'></script>
+		<script src='js/sign.js'></script>
+		<script src="js/library/esri-leaflet.js"></script>
+		<script src="js/library/osmtogeojson.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/Map.js"></script>	
+		<script src="js/library/L.Control.Locate.min.js" ></script>
+		<script src="js/library/jquery.rustaMsgBox.js" ></script>	
+		<script src="js/tsp.js" ></script>	
+		<script src="js/directions.js" ></script>	
+		<script src="js/signs.js" ></script>	
+		<script src="js/generateQRCode.js" ></script>
+		<script src="js/library/qrcode.js" ></script>
+		
+		<script src="js/timeSliderControl.js"></script>
+		<script src="js/appControl.js"></script>	
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+          
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />      		
+		<link rel="stylesheet" type="text/css" href="css/index.css" />	
+	   <title>GoWest</title>			
+    </head>
+    <body>
+		<div class = "startingPage">	
+			<p><b class = "letter">G</b>uidance,</p>
+			<p><b class = "letter">O</b>rientation,</p>
+			<p><b class = "letter">W</b>ayfinding, and</p>
+			<p><b class = "letter">E</b>xploration</p>
+			<p><b class = "letter">S</b>upport for</p>
+			<p><b class = "letter">T</b>ourists</p>
+		</div>
+		<div id = "buttons">	
+		</div>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>	
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </body>
+    <script>
+    
+    mobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase());
+    
+    if (mobileDevice){
+		$('#buttons').append($('<button onclick="redirectGerman();" style = "position:absolute; bottom:100px; left:0px; width:50%;">App starten</button>'+
+								'<button onclick="redirectEnglish();" style = "position:absolute; bottom:100px; right:0px; width:50%;">Start App</button>'));
+		$('#buttons').append($('<button onclick="redirect2();" style = "position:absolute; bottom:50px;">About/Impressum</button>'));   
+		$('#buttons').append($('<button onclick="closeApp();" style = "position:absolute; bottom:0px;">Exit</button>'));
+    }else{
+		$('#buttons').append($('<button onclick="redirectGerman();" style = "position:absolute; bottom:50px; left:0px; width:50%;">App starten</button>'+
+								'<button onclick="redirectEnglish();" style = "position:absolute; bottom:50px; right:0px; width:50%;">Start App</button>'));
+		$('#buttons').append($('<button onclick="redirect2();" style = "position:absolute; bottom:0px;">About/Impressum</button>'));
+    }
+    
+	 function redirectEnglish(){
+	 	window.location = "app_en.html";
+	 	language.option = "German";
+	 }
+	 
+	 function redirectGerman(){
+	 	window.location = "app_de.html";
+	 	language.option = "German";
+	 }	 
+	 
+	 function redirect2(){
+	 	window.location = "about.html";
+	 }
+	 
+	 function closeApp(){
+	 	navigator.app.exitApp();
+	 }	 
+	</script>
+</html>
